@@ -23,6 +23,8 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+
+        setContentView(R.layout.sign_account)
     }
 }
 
