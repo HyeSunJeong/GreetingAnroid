@@ -12,7 +12,7 @@
         android:gravity="center_horizontal">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center_horizontal">
@@ -30,7 +30,7 @@
                 android:id="@+id/editTextText4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="11"
                 android:hint="ID"
                 android:layout_marginTop="45dp"
                 android:inputType="text" />
@@ -39,7 +39,7 @@
                 android:id="@+id/editTextNumberPassword2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="11"
                 android:hint="Password"
                 android:layout_marginTop="10dp"
                 android:inputType="numberPassword" />
@@ -48,7 +48,7 @@
                 android:id="@+id/editTextTextEmailAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="11"
                 android:hint="E-mail"
                 android:layout_marginTop="10dp"
                 android:inputType="textEmailAddress" />
@@ -57,7 +57,7 @@
                 android:id="@+id/editTextPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="11"
                 android:hint="Phone Number"
                 android:layout_marginTop="10dp"
                 android:inputType="phone" />

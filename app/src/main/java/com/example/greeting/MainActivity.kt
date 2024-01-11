@@ -1,6 +1,10 @@
 package com.example.greeting
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.Button
+import android.widget.EditText
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,31 +19,18 @@ import com.example.greeting.ui.theme.GreetingTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            GreetingTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    Greeting("Android")
-                }
-            }
+        setContentView(R.layout.activity_main)
+
+        val sendButton = findViewById<Button>(R.id.sendButton)
+
+        sendButton.setOnClickListener {
+            val sendText = findViewById<EditText>(R.id.sendText)
+            val sendMessage = sendText.text.toString()
+            val sendIntent = Intent(this, SubActivity::class.java)
+            sendIntent.putExtra("message", sendMessage)
+
+            startActivity(sendIntent)
         }
-
-        setContentView(R.layout.sign_account)
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-            text = "Hello $name!",
-            modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    GreetingTheme {
-        Greeting("Android")
-    }
-}
