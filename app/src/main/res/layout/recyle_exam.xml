@@ -8,7 +8,8 @@
 
 
     <TextView
-        android:id="@+id/texqwtView2"
+        android:id="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -16,8 +17,7 @@
         android:text="제주도 관광명소 🏝️"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView2" />
+        android:layout_marginBottom="30dp" />
 
 
     <LinearLayout

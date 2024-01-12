@@ -2,6 +2,7 @@ package com.example.greeting
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
@@ -13,6 +14,23 @@ import com.example.greeting.data.createRealJejuLocationData
 import com.example.greeting.ui.theme.adapters.LocationAdapter
 
 class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val mapButton = findViewById<Button>(R.id.map_button)
+
+        mapButton.setOnClickListener {
+            val mapIntent = Intent (this, MapsActivity::class.java)
+            startActivity(mapIntent)
+        }
+    }
+}
+
+
+// item_location.xml, recyle_exam.xml, Location.kt, LocationAdapter, LocationViewHolder
+// 이 파일들과 관련된 제주도 관광명소 좌표를 불러오는 코드!
+/*class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.recyle_exam)
@@ -27,19 +45,10 @@ class MainActivity : ComponentActivity() {
         val locationAdapter = LocationAdapter(sampleLocations)
         recyclerView.adapter = locationAdapter
 
-        //val sendButton = findViewById<Button>(R.id.sendButton)
-
-        //sendButton.setOnClickListener {
-            //val sendText = findViewById<EditText>(R.id.sendText)
-            //val sendMessage = sendText.text.toString()
-            //val sendIntent = Intent(this, SubActivity::class.java)
-            //sendIntent.putExtra("message", sendMessage)
-
-            //startActivity(sendIntent)
-        //}
     }
-}
 
-// 예제 데이터 사용
-val sampleLocations = createRealJejuLocationData()
+    // 예제 데이터 사용
+    val sampleLocations = createRealJejuLocationData()
+
+}*/
 
